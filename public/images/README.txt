@@ -1,0 +1,1 @@
+Place local book cover images here if desired. By default cover_url uses remote OpenLibrary images.
