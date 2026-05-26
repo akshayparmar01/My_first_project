@@ -36,7 +36,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <form method="post" novalidate>
       <label>Name <input name="name" required></label>
       <label>Email <input type="email" name="email" required></label>
-      <label>Password <input type="password" name="password" required></label>
+      <label>Password
+        <div style="position:relative">
+          <input type="password" name="password" id="register-password" required maxlength="8" style="padding-right:36px;">
+          <span class="toggle-password" onclick="togglePassword('register-password', this)" style="position:absolute;top:50%;right:10px;transform:translateY(-50%);cursor:pointer;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          </span>
+        </div>
+      </label>
       <button type="submit" class="btn">Register</button>
     </form>
     <p>Already have account? <a href="index.php">Login</a></p>

@@ -1,3 +1,18 @@
+/* Password toggle eye icon */
+.toggle-password {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 32px;
+  color: var(--muted);
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s;
+}
+.toggle-password:hover {
+  color: var(--accent);
+}
 /* ROOT VARIABLES */
 :root {
   --bg: #0f172a;

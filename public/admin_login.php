@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             background: rgba(255,255,255,0.16);
             backdrop-filter: blur(12px);
             border-radius: 18px;
-            box-shadow:0 20px 40px rgba(0,0,0,0.18);
+            box-shadow:0 20px 45px rgba(0,0,0,0.18);
             color:white;
             animation: fadeIn 0.7s ease;
         }
@@ -122,6 +122,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     </style>
 </head>
+<script src="js/scripts.js"></script>
+</head>
 
 <body>
 
@@ -135,7 +137,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <input type="email" name="email" placeholder="Enter admin email" required>
 
         <label>Password</label>
-        <input type="password" name="password" placeholder="Enter admin password" required>
+                <div style="display:flex;align-items:center;position:relative;">
+                    <input type="password" name="password" id="admin-password" placeholder="Enter admin password" required maxlength="8" style="flex:1;border-radius:10px 0 0 10px;margin-bottom:0;padding-right:36px;">
+                    <span class="toggle-password" onclick="togglePassword('admin-password', this)" style="background:rgba(255,255,255,0.18);height:44px;display:flex;align-items:center;justify-content:center;border-radius:0 10px 10px 0;padding:0 10px;position:relative;right:0;top:0;cursor:pointer;">
+                        <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                    </span>
+                </div>
 
         <button type="submit" class="btn">Login</button>
     </form>
